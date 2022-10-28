@@ -5,13 +5,104 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercises</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="functions.js" type="text/javascript"></script>
+
 </head>
 
 <body>
-    <script>
 
-    </script>
+    <h2 class="topic">Калькуляторы фигур на JavaScript</h2>
+
+    <!-- exercise 1 -->
+    <div id="ex1" class="main_block">
+        <h2 class="title">1. Сделайте калькулятор, который будет находить площадь и периметр квадрата.</h2>
+        <div class="exercise_block">
+            <p class="condition">Введите длинну стороны квадрата и нажмите вычислить</p>
+            <div class="center">
+                <input type="text" class="data" placeholder="введите число">
+                <input type="button" value="Вычислить" class="enter">
+                <p class="result square">Площадь:<span></span></p>
+                <p class="result perimeter">Периметор:<span></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- exercise 2 -->
+    <div id="ex2" class="main_block">
+        <h2 class="title">2. Сделайте калькулятор, который будет находить площадь и периметр прямоугольника.</h2>
+        <div class="exercise_block">
+            <p class="condition">Введите длинну двух сторон прямоугольника и нажмите вычислить</p>
+            <div class="center">
+                <input type="text" class="data" id='first_side' placeholder="введите число">
+                <input type="text" class="data" id='second_side' placeholder="введите число">
+                <input type="button" value="Вычислить" class="enter">
+                <p class="result square">Площадь:<span></span></p>
+                <p class="result perimeter">Периметор:<span></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- exercise 3 -->
+    <div id="ex3" class="main_block">
+        <h2 class="title">3. Сделайте калькулятор, который будет находить площадь круга и длину окружности.</h2>
+        <div class="exercise_block">
+            <p class="condition">Введите радиус или диаметр и нажмите вычислить</p>
+            <div class="center">
+                <input type="text" class="data length" placeholder="введите число">
+                <select style="height: 26px;">
+                    <option value="радиус" selected>радиус</option>
+                    <option value="диаметр">диаметр</option>
+                </select>
+                <input type="button" value="Вычислить" class="enter">
+                <p class="result result1">Площадь:<span></span></p>
+                <p class="result result2">Длина окружности:<span></span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- exercise 4 -->
+    <div id="ex4" class="main_block">
+        <h2 class="title">4. Сделайте калькулятор, который будет находить площадь треугольника по трем сторонам.</h2>
+        <div class="exercise_block">
+            <p class="condition">Введите длинну трёх сторон треугольника и нажмите вычислить</p>
+            <div class="center">
+                <input type="text" class="data first_side" placeholder="введите число">
+                <input type="text" class="data second_side" placeholder="введите число">
+                <input type="text" class="data third_side" placeholder="введите число">
+                <input type="button" value="Вычислить" class="enter">
+                <p class="result result1">Площадь:<span></span></p>
+            </div>
+        </div>
+    </div>
+
+
+    <h2 class="topic">Игра "угадай число"</h2>
+    <div id="ex5" class="main_block">
+        <div class="exercise_block">
+            <p class="condition">Введите число от 1 до 100 и нажмите "Проверить"</p>
+            <div class="center">
+                <div id="newGame">
+                    <input type="button" value="Новая игра" class="enter">
+                </div>
+                <div class="mb10">
+                    <input type="text" class="data" placeholder="введите число">
+                    <input type="button" value="Проверить" class="enter">
+                </div>
+                <div id="prompt" class="mb10" taCenter>
+                    <p></p>
+                </div>
+                <div id="bestResult" class="mb10" taCenter>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js" type="text/javascript"></script>
 </body>
 
 </html>
