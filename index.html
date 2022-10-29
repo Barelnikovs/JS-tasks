@@ -81,20 +81,20 @@
     <h2 class="topic">Игра "угадай число"</h2>
     <div id="ex5" class="main_block">
         <div class="exercise_block">
-            <p class="condition">Введите число от 1 до 100 и нажмите "Проверить"</p>
+            <p id="whatToDo" class="condition">Нажмите начать игру</p>
             <div class="center">
                 <div id="newGame">
-                    <input type="button" value="Новая игра" class="enter">
+                    <input type="button" value="Начать игру" class="enter">
                 </div>
                 <div class="mb10">
-                    <input type="text" class="data" placeholder="введите число">
-                    <input type="button" value="Проверить" class="enter">
+                    <input type="text" id="enterNum" class="data" disabled>
+                    <input type="button" value="Проверить" id="checkNum" class="enter" disabled>
                 </div>
-                <div id="prompt" class="mb10" taCenter>
-                    <p></p>
+                <div class="mb10 taCenter">
+                    <span id="attampts" class="fz14"></span>
                 </div>
-                <div id="bestResult" class="mb10" taCenter>
-                    <p></p>
+                <div id="bestResult" class="mb10 taCenter">
+                    <span class="fz14"></span>
                 </div>
             </div>
         </div>

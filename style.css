@@ -1,5 +1,6 @@
 body {
     background: #E7E7E7;
+    margin-bottom: 250px;
 }
 
 .topic {
@@ -75,6 +76,10 @@ select:focus {
     min-height: 10px;
 }
 
-taCenter {
+.taCenter {
     text-align: center;
+}
+
+.fz14 {
+    font-size: 14px;
 }

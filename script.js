@@ -64,3 +64,47 @@ const PI = 3.142
         res.textContent = (p * (p - a) * (p - b) * (p - c)) ** 0.5 + ' см²'
     })
 })();
+
+// exercise 4 Угадай число
+; (function () {
+    let condition = document.querySelector('#whatToDo')
+    let newGame = document.querySelector('#newGame input')
+    let enterNum = document.getElementById('enterNum')
+    let checkNum = document.querySelector('#checkNum')
+    let attampts = document.querySelector('#attampts')
+    let bestRes = document.querySelector('#bestResult span')
+
+    newGame.addEventListener('click', function () {
+        let counter = 0
+        enterNum.addEventListener('click', function () {
+            enterNum.value = ''
+        })
+        if (newGame.value === 'Начать игру') {
+            let num = Math.ceil(Math.random() * 100)
+            console.log(num)
+            newGame.value = 'Новая игра'
+            whatToDo.textContent = 'Загадано число от 1 до 100'
+            enterNum.removeAttribute('disabled')
+            enterNum.select()
+            checkNum.removeAttribute('disabled')
+            attampts.textContent = 'Попыток использовано: ' + counter
+            checkNum.addEventListener('click', function check() {
+                if (Number.isInteger(Number(enterNum.value)) == false) {
+                    enterNum.value = 'введите целое число'
+                } if (Number(enterNum.value) < 100 && Number(enterNum.value) > num && Number(enterNum.value) !== num) {
+                    enterNum.value = 'число меньше'
+                    attampts.textContent = 'Попыток использовано: ' + ++counter
+                } if (Number(enterNum.value) > 100 || Number(enterNum.value) < 1) {
+                    enterNum.value = 'число не подходит'
+                } if (Number(enterNum.value) >= 1 && Number(enterNum.value) < num && Number(enterNum.value) !== num) {
+                    enterNum.value = 'число больше'
+                    attampts.textContent = 'Попыток использовано: ' + ++counter
+                } if (Number(enterNum.value) == num) {
+                    enterNum.value = 'Победа!'
+                    attampts.textContent = 'Попыток использовано: ' + ++counter
+                    bestRes.textContent = 'Лучший результат ' + counter
+                }
+            })
+        }
+    })
+})()
