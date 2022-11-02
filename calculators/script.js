@@ -73,38 +73,45 @@ const PI = 3.142
     let checkNum = document.querySelector('#checkNum')
     let attampts = document.querySelector('#attampts')
     let bestRes = document.querySelector('#bestResult span')
+    let counter = 0
+    let theBest = 99999
 
     newGame.addEventListener('click', function () {
-        let counter = 0
+        enterNum.value = ''
         enterNum.addEventListener('click', function () {
             enterNum.value = ''
         })
-        if (newGame.value === 'Начать игру') {
-            let num = Math.ceil(Math.random() * 100)
-            console.log(num)
-            newGame.value = 'Новая игра'
-            whatToDo.textContent = 'Загадано число от 1 до 100'
-            enterNum.removeAttribute('disabled')
-            enterNum.select()
-            checkNum.removeAttribute('disabled')
-            attampts.textContent = 'Попыток использовано: ' + counter
-            checkNum.addEventListener('click', function check() {
-                if (Number.isInteger(Number(enterNum.value)) == false) {
-                    enterNum.value = 'введите целое число'
-                } if (Number(enterNum.value) < 100 && Number(enterNum.value) > num && Number(enterNum.value) !== num) {
-                    enterNum.value = 'число меньше'
-                    attampts.textContent = 'Попыток использовано: ' + ++counter
-                } if (Number(enterNum.value) > 100 || Number(enterNum.value) < 1) {
-                    enterNum.value = 'число не подходит'
-                } if (Number(enterNum.value) >= 1 && Number(enterNum.value) < num && Number(enterNum.value) !== num) {
-                    enterNum.value = 'число больше'
-                    attampts.textContent = 'Попыток использовано: ' + ++counter
-                } if (Number(enterNum.value) == num) {
-                    enterNum.value = 'Победа!'
-                    attampts.textContent = 'Попыток использовано: ' + ++counter
-                    bestRes.textContent = 'Лучший результат ' + counter
+        let num = Math.ceil(Math.random() * 100)
+        console.log(num)
+        newGame.value = 'Новая игра'
+        whatToDo.textContent = 'Загадано число от 1 до 100'
+        enterNum.removeAttribute('disabled')
+        enterNum.select()
+        checkNum.removeAttribute('disabled')
+        attampts.textContent = 'Попыток использовано: ' + counter
+        checkNum.addEventListener('click', function check() {
+            if (Number.isInteger(Number(enterNum.value)) == false) {
+                enterNum.value = 'введите целое число'
+            } if (Number(enterNum.value) < 100 && Number(enterNum.value) > num && Number(enterNum.value) !== num) {
+                enterNum.value = 'число меньше'
+                attampts.textContent = 'Попыток использовано: ' + ++counter
+            } if (Number(enterNum.value) > 100 || Number(enterNum.value) < 1) {
+                enterNum.value = 'число не подходит'
+            } if (Number(enterNum.value) >= 1 && Number(enterNum.value) < num && Number(enterNum.value) !== num) {
+                enterNum.value = 'число больше'
+                attampts.textContent = 'Попыток использовано: ' + ++counter
+            } if (Number(enterNum.value) == num) {
+                enterNum.value = 'Победа!'
+                attampts.textContent = 'Ваш результат: ' + ++counter
+                if (counter < theBest) {
+                    theBest = counter
+                    bestRes.textContent = 'Лучший результат: ' + theBest
                 }
-            })
-        }
+                checkNum.setAttribute('disabled', '')
+                enterNum.setAttribute('disabled', '')
+                whatToDo.textContent = 'Нажмите "Новая игра"'
+                counter = 0
+            }
+        })
     })
 })()
