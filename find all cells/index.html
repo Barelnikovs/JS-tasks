@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find all cells</title>
+    <link rel="stylesheet"
+        href="C:\Users\barel\OneDrive\Документы\GitHub\Solving-problems-from-the-JS-practice-textbook-\reset.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script
+        src="C:\Users\barel\OneDrive\Документы\GitHub\Solving-problems-from-the-JS-practice-textbook-\functions.js"></script>
+</head>
+
+<body>
+
+    <div class="main-block">
+        <div class="name-of-game">
+            <h1 class="name-of-game__h1">Игра "Найди все ячейки"</h1>
+        </div>
+        <div class="prompt">
+            <p class="prompt__p" id="prompt">Нажмите "Новая игра"</p>
+        </div>
+        <div class="game-place">
+            <div class="game-place__block1">
+                <input class="block1__new-game" id="new-game" type="button" value="Новая игра">
+            </div>
+            <div class="game-place__block2 d-none">
+                <table class="table" id="table">
+                    <tr>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                    </tr>
+                    <tr>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                    </tr>
+                    <tr>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                    </tr>
+                    <tr>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                    </tr>
+                    <tr>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                    </tr>
+                    <tr>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                    </tr>
+                    <tr>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                    </tr>
+                    <tr>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                    </tr>
+                    <tr>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                    </tr>
+                    <tr>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                        <td class="td__white"></td>
+                    </tr>
+                </table>
+                <p class="counter" id="attampts"></p>
+                <p class="counter" id="remaining-cells"></p>
+            </div>
+        </div>
+    </div>
+
+    <script
+        src="C:\Users\barel\OneDrive\Документы\GitHub\Solving-problems-from-the-JS-practice-textbook-\find all cells\script.js"></script>
+</body>
+
+</html>

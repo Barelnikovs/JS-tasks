@@ -1,0 +1,120 @@
+body {
+    background-color: #F8FAFF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.main-block {
+    border: 1px solid #000;
+    width: 80vw;
+    margin: 10px auto;
+}
+
+.name-of-game {
+    background-color: #138682;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-of-game__h1 {
+    font-size: 34px;
+}
+
+.prompt {
+    background-color: #80F3EF;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.prompt__p {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 550;
+}
+
+.game-place__block1,
+.game-place__block2 {
+    background-color: #80F3EF;
+    height: 71vh;
+    padding: 5px;
+}
+
+.game-place__block1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.block1__new-game {
+    width: 20vw;
+    height: 10vh;
+    margin-bottom: 100px;
+    font-size: 28px;
+    letter-spacing: 2px;
+    border: none;
+    box-shadow: 0 0 10px 1px black;
+    background-color: #fff;
+}
+
+.block1__new-game:hover {
+    background-color: #eee;
+}
+
+.block1__new-game:active {
+    background-color: white;
+}
+
+.counter {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* таблица */
+.table {
+    border-collapse: collapse;
+    margin: 0 auto 15px;
+}
+
+.table td {
+    height: 40px;
+    width: 40px;
+    border: 3px solid #000;
+}
+
+.table .td__white {
+    background-color: #fff;
+}
+
+.table .td__grey {
+    background-color: #E6E6E6;
+}
+
+.table .td__white:hover,
+.table .td__grey:hover {
+    background-color: grey;
+}
+
+.table .td__white:active {
+    background-color: #fff;
+}
+
+
+.table .td__red {
+    background-color: #FF0000;
+}
+
+.table .td__red:hover {
+    background-color: #A00000;
+}
