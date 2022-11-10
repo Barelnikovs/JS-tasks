@@ -1,0 +1,119 @@
+body {
+    margin: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.keyboard {
+    border: 2px solid #000;
+    border-radius: 4px;
+    width: 80vw;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.keyboard p {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.keyboard__button {
+    width: 4.3vw;
+    height: 4.3vw;
+    border: 1px solid #000;
+    margin: 0.5vw;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.button:active {
+    box-shadow: inset 0px 0px 2px 1px black;
+}
+
+.backspase {
+    width: 9.6vw;
+}
+
+.tab {
+    width: 6.4vw;
+}
+
+.backslash {
+    width: 7.4vw;
+}
+
+.capslock,
+.ctrl {
+    width: 6.9vw;
+}
+
+.enter {
+    width: 12.1vw;
+}
+
+.l-shift {
+    width: 9.7vw;
+}
+
+.r-shift {
+    width: 14.5vw;
+}
+
+.windows {
+    width: 6.1vw;
+}
+
+.alt {
+    width: 5.3vw;
+}
+
+.space {
+    width: 25.5vw;
+}
+
+.arrow {
+    width: 4.7vw;
+}
+
+.up-downs {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.up-down {
+    border: 1px solid #000;
+    height: 2vw;
+    width: 100%;
+    text-align: center;
+}
+
+.d-none {
+    display: none;
+}
+
+.learning {
+    border: 2px solid #000;
+    width: 45vw;
+    height: 45vw;
+    margin: 50px auto
+}
+
+.learning div {
+    border: 1px solid #000;
+    height: 120px;
+    width: 120px;
+    background-color: yellow;
+}
+
+.float {
+    float: left;
+}
