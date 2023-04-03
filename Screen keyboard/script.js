@@ -208,9 +208,6 @@ document.addEventListener('keyup', function (event) {
 })
 
 keyboard.addEventListener('click', function (event) { // ввод данных
-    if (event.target.closest('.key').dataset.code === 'undefined') {
-        return 'puk'
-    }
     if (event.target.closest('.key').dataset.code === 'Backspace') {
         input.value = input.value.slice(0, -1)
     } else if (event.target.closest('.key').dataset.code === 'CapsLock') {

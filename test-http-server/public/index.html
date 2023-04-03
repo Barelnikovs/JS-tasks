@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<title>Test HTTP server</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+	<h1>MAIN</h1>
+	<a href="http://localhost:8080/dir/test.html">test.html</a>
+	<a href="http://localhost:8080/form.html">form.html</a>
+	<script src="script.js"></script>
+	<script>
+		let paramsString = 'test1=param1&test2=param2&test3=param3'
+		let searchParams = new URLSearchParams(paramsString)
+		searchParams.append('test3', 'param3')
+		searchParams.delete('test2')
+		searchParams.set('test1', 'param3')
+		for (let param of searchParams) {
+			console.log(param)
+		}
+	</script>
+</body>
+
+</html>

@@ -42,5 +42,5 @@
             return res;
         }
 
-        window.lib = { square, cube, avg, digitsSum, randomInteger, getArrWithRundomDifferentDigits };
+        window.lib = { square, cube, avg, digitsSum, randomInteger, getArrWithRundomDifferentDigits, sum };
     })();
