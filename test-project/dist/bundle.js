@@ -1,0 +1,1 @@
+(()=>{"use strict";new Promise((function(e){setTimeout((function(){e(alert("puk"))}),5e3)}))})();
