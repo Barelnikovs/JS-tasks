@@ -1,5 +1,5 @@
 "use strict"
-
+console.log('script is working')
 let prompt = document.getElementById('prompt')
 let newGame = document.getElementById('new-game')
 let table = document.getElementById('table')
